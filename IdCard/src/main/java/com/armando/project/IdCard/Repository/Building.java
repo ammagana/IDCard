@@ -3,7 +3,9 @@ package com.armando.project.IdCard.Repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import com.armando.project.IdCard.Model.BuildingModel;
+
 @Repository
-public interface Building extends CrudRepository<Building, Integer>{
+public interface Building extends CrudRepository<BuildingModel, Integer>{
 
 }
