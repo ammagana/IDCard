@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.armando.project.IdCard.Model.DepartmentModel;
 
-@Repository
+@Repository("department")
 public interface Department extends CrudRepository<DepartmentModel, Integer>{
 
 }

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.armando.project.IdCard.Model.BuildingModel;
 
-@Repository
+@Repository("building")
 public interface Building extends CrudRepository<BuildingModel, Integer>{
 
 }

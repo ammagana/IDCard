@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.armando.project.IdCard.Model.ManagerModel;
 
-@Repository
+@Repository("manager")
 public interface Manager extends CrudRepository<ManagerModel, Integer>{
 
 }

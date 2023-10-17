@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.armando.project.IdCard.Model.UserModel;
 
-@Repository
+@Repository("user")
 public interface User extends CrudRepository<UserModel, Integer>{
 
 }
