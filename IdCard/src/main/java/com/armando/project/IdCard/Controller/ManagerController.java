@@ -22,6 +22,6 @@ public class ManagerController {
 	
 	@GetMapping("/all")
 	public List<ManagerModel> getAll(){
-		return this.manager.getAllDepartments();
+		return this.manager.getAll();
 	}
 }

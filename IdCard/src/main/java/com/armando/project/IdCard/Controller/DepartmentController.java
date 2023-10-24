@@ -23,7 +23,7 @@ public class DepartmentController {
 		
 		@GetMapping("/all")
 		public List<DepartmentModel> getAll(){
-			return this.department.getAllDepartments();
+			return this.department.getAll();
 		}
 		
 }

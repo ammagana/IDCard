@@ -13,7 +13,15 @@ public class ManagerService {
 	@Autowired
 	Manager manager;
 	
-	public List<ManagerModel> getAllDepartments(){
-		return (List<ManagerModel>) this.manager.findAll();
+	public List<ManagerModel> getAll(){
+		return this.manager.findAll();
+	}
+	
+	public ManagerModel getById(int id) {
+		return this.manager.findById(id);
+	}
+	
+	public void save(ManagerModel manager) {
+		this.manager.save(manager);
 	}
 }

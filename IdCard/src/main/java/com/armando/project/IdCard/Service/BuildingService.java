@@ -14,6 +14,14 @@ public class BuildingService {
 	private Building building;
 		
 	public List<BuildingModel> getAll() {
-		return (List<BuildingModel>) building.findAll();
+		return building.findAll();
+	}
+	
+	public BuildingModel getById(int id) {
+		return building.findById(id);
+	}
+	
+	public void save(BuildingModel building) {
+		this.building.save(building);
 	}
 }

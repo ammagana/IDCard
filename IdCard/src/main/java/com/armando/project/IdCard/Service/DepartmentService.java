@@ -13,7 +13,15 @@ public class DepartmentService {
 	@Autowired
 	Department department;
 	
-	public List<DepartmentModel> getAllDepartments(){
-		return (List<DepartmentModel>) this.department.findAll();
+	public List<DepartmentModel> getAll(){
+		return this.department.findAll();
+	}
+
+	public DepartmentModel getById(int id) {
+		return this.department.findById(id);
+	}
+	
+	public void save(DepartmentModel department) {
+		this.department.save(department);
 	}
 }

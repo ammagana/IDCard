@@ -14,6 +14,14 @@ public class UserService {
 	User user;
 	
 	public List<UserModel> getAll(){
-		return (List<UserModel>) this.user.findAll();
+		return this.user.findAll();
+	}
+	
+	public UserModel getById(int id) {
+		return this.user.findById(id);
+	}
+	
+	public void save(UserModel user) {
+		this.user.save(user);
 	}
 }
