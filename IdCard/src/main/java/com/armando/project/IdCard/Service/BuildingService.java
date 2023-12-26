@@ -21,7 +21,12 @@ public class BuildingService {
 		return building.findById(id);
 	}
 	
+	public BuildingModel getByName(String name) {
+		return building.findByName(name);
+	}
+	
 	public void save(BuildingModel building) {
 		this.building.save(building);
 	}
+	
 }

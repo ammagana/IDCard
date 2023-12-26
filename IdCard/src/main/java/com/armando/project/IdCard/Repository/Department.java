@@ -11,4 +11,5 @@ import com.armando.project.IdCard.Model.DepartmentModel;
 public interface Department extends CrudRepository<DepartmentModel, Integer>{
 	public List<DepartmentModel> findAll();
 	public DepartmentModel findById(int id);
+	public DepartmentModel findByName(String name);
 }

@@ -11,4 +11,5 @@ import com.armando.project.IdCard.Model.BuildingModel;
 public interface Building extends CrudRepository<BuildingModel, Integer>{
 		public List<BuildingModel> findAll();
 		public BuildingModel findById(int id);
+		public BuildingModel findByName(String name);
 }
