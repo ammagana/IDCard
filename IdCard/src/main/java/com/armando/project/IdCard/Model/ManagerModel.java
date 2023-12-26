@@ -9,6 +9,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table("manager")
 public class ManagerModel {
 	@Id
+	@Column("id")
 	private int id;
 	@Column("firstName")
 	private String firstName;

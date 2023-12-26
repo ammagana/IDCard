@@ -11,7 +11,7 @@ import com.armando.project.IdCard.Model.UserModel;
 public interface User extends CrudRepository<UserModel, Integer>{
 	public List<UserModel> findAll();
 	public UserModel findById(int id);
-	public List<UserModel> findByName(String name);
-	public List<UserModel> findByManagerId(int id);
+	public List<UserModel> findByFirstName(String name);
+	public List<UserModel> findByManagerID(int id);
 	public List<UserModel> findByDepartmentId(int id);
 }

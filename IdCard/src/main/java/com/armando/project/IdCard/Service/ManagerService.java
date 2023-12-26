@@ -22,7 +22,7 @@ public class ManagerService {
 	}
 	
 	public List<ManagerModel> findByName(String name){
-		return this.manager.findByName(name);
+		return this.manager.findByFirstName(name);
 	}
 	
 	public void save(ManagerModel manager) {
