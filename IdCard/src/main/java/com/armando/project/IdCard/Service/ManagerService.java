@@ -21,6 +21,10 @@ public class ManagerService {
 		return this.manager.findById(id);
 	}
 	
+	public List<ManagerModel> findByName(String name){
+		return this.manager.findByName(name);
+	}
+	
 	public void save(ManagerModel manager) {
 		this.manager.save(manager);
 	}
