@@ -1,9 +1,28 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
+import { Building } from '../Models/Building';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IDServiceService {
 
-  constructor() { }
+  private url = "localhost:8080";
+  constructor(private http:HttpClient) { }
+
+  getBuildings():Observable<Building>{
+    const url = `${this.url}/all`;
+    return this.http.get<Building>(url);
+  }
+
+  getBuildingID(Id:number):Observable<Building>{
+    const url = `${this.url}/${Id}`;
+    return this.http.get<Building>(url);
+  }
+
+  getBuildingName(name:string):Observable<Building>{
+    const url = `${this.url}/name/${name}`;
+    return this.http.get<Building>(url);
+  }
 }
