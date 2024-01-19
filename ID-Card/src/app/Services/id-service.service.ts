@@ -12,19 +12,19 @@ export class IDServiceService {
   private url = "localhost:8080";
   constructor(private http:HttpClient) { }
 
-  getBuildings():Observable<Building>{
+  getBuildings():Observable<Building[]>{
     const url = `${this.url}/all`;
-    return this.http.get<Building>(url);
+    return this.http.get<Building[]>(url);
   }
 
-  getBuildingID(Id:number):Observable<Building>{
+  getBuildingID(Id:number):Observable<Building[]>{
     const url = `${this.url}/${Id}`;
-    return this.http.get<Building>(url);
+    return this.http.get<Building[]>(url);
   }
 
-  getBuildingName(name:string):Observable<Building>{
+  getBuildingName(name:string):Observable<Building[]>{
     const url = `${this.url}/name/${name}`;
-    return this.http.get<Building>(url);
+    return this.http.get<Building[]>(url);
   }
 
   getDepartment():Observable<Department>{
